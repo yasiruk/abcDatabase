@@ -6,13 +6,13 @@
 
 		<!-- if there are login errors, show them here -->
 		<p>
-			{{ $errors->first('email') }}
+			{{ $errors->first('username') }}
 			{{ $errors->first('password') }}
 		</p>
 
 		<p>
-			{{ Form::label('email', 'Email Address') }}
-			{{ Form::text('email', Input::old('email'), array('placeholder' => 'awesome@awesome.com', 'class' => 'form-control')) }}
+			{{ Form::label('username', 'username Address') }}
+			{{ Form::text('username', Input::old('username'), array('placeholder' => 'username', 'class' => 'form-control')) }}
 		</p>
 
 		<p>
