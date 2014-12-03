@@ -40,7 +40,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active" id="hhome"><a href="index.php">home <span class="sr-only">(current)</span></a></li>
+                <li class="active" id="hhome"><a href=".">home <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">print</a></li>
                 <li><a href="#">export</a></li>
                 <li class="dropdown" id="hdropdown">

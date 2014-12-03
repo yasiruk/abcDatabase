@@ -16,9 +16,9 @@ Route::get('/', function()
 	return View::make('home');
 });
 
-Route::get('login', array('uses' => 'HomeController@showLogin'));
+Route::get('login', array('uses' => 'LoginController@showLogin'));
 
-Route::post('login', array('uses' => 'HomeController@doLogin'));
+Route::post('login', array('uses' => 'LoginController@doLogin'));
 
 // Route::get('login', function() {
 // 	return View::make('login');

@@ -19,10 +19,5 @@ class HomeController extends BaseController {
 	{
 		return View::make('hello');
 	}
-	public function showLogin() {
-		return View::make('login');
-	}
-	public function doLogin() {
-		return Redirect::to('/');
-	}
+
 }
