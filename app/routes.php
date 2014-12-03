@@ -15,6 +15,11 @@ Route::get('/', function()
 {
 	return View::make('home');
 });
-Route::get('login', function(){
-	return View::make('login');
-});
+
+Route::get('login', array('uses' => 'HomeController@showLogin'));
+
+Route::post('login', array('uses' => 'HomeController@doLogin'));
+
+// Route::get('login', function() {
+// 	return View::make('login');
+// });
