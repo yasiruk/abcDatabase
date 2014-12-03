@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-{{ Form::open(array('url' => 'login')) }}
+{{ Form::open(array('url' => 'login', 'class' => 'form-signin', 'style' => 'display: block', 'role' => 'form')) }}
 		<h1>Login</h1>
 
 		<!-- if there are login errors, show them here -->
@@ -12,15 +12,15 @@
 
 		<p>
 			{{ Form::label('email', 'Email Address') }}
-			{{ Form::text('email', Input::old('email'), array('placeholder' => 'awesome@awesome.com')) }}
+			{{ Form::text('email', Input::old('email'), array('placeholder' => 'awesome@awesome.com', 'class' => 'form-control')) }}
 		</p>
 
 		<p>
 			{{ Form::label('password', 'Password') }}
-			{{ Form::password('password') }}
+			{{ Form::password('password', array('class' => 'form-control')) }}
 		</p>
 
-		<p>{{ Form::submit('Submit!') }}</p>
+		<p>{{ Form::submit('Submit!', array('class' => 'btn btn-default')) }}</p>
 	{{ Form::close() }}
 
 
