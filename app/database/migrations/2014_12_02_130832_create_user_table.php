@@ -17,9 +17,10 @@ class CreateUserTable extends Migration {
 			$table->string('username')->unique();
 			$table->string('first_name');
 			$table->string('last_name');
-			$table->string('password');
+			$table->string('password', 60);
 			$table->index('username');
 		});
+
 	}
 
 	/**

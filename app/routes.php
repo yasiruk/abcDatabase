@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('home')->with('name', Input::get('email', 'Nope...user not signed up..'));
+	return View::make('home')->with('name', array('username' => Auth::user()->username, 'first_name' => Auth::user()->first_name));
 });
 
 Route::get('login', array('uses' => 'LoginController@showLogin'));
@@ -23,7 +23,8 @@ Route::post('login', array('uses' => 'LoginController@doLogin'));
 Route::get('users', function() {
 	$users = User::all();
 
-	return View::make('users')->with('users', $users);
+	return View::make('users')->with("users", $users);
+
 });
 // Route::get('login', function() {
 // 	return View::make('login');

@@ -2,8 +2,8 @@
 
 @section('content')
 <ul>
-@foreach ($$users as $$user) 
-	<li>{{ $user->username}} , {{ $user->first_name }} , {{ $user->password }} </li>
+@foreach ($users as $user) 
+	<li>{{ $user->username}}, {{ $user->last_name }} </li>
 @endforeach
 </ul>
 @stop

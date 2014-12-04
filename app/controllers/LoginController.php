@@ -10,14 +10,14 @@
 		if($validiator->fails())
 			return Redirect::to('login')->withErrors($validiator)->withInput(Input::except('password'));
 		
-		$userdata = array('username' => Input::get('username', 'username'), 
-						  'password' => md5(Input::get('password', 'password')));
+		$userdata = array('username' => Input::get('username'), 
+						  'password' => Input::get('password'));
 
 		
-		if(Auth::attempt($userdata))
+		if(Auth::attempt($userdata, true))
 		{
 			Log::info('Register successfull for '.$userdata['username']." ".$userdata['password'] );
-			return Redirect::to('home');	
+			return Redirect::to('/');	
 		}	
 		else
 		{
