@@ -71,8 +71,14 @@
                     </ul>
                 </li>
                 -->
-                <li id="hlogin"><a href="./login">log in </a></li>
-                <li id="hlogout"><a href="#">log out </a></li>
+                <?php
+                    if(isset($name))
+                        $link = "./controlpanel";
+                    else
+                        $link = "./login";
+                ?>
+                <li id="hlogin"><a href={{ $link }}>{{ isset($name) ? $name['username'] : "login"}} </a></li>
+                <li id="hlogout"><a href="./logout">log out </a></li>
 
             </ul>
 

@@ -26,5 +26,12 @@
 		}
 		
 	}
+	public function doLogout()
+	{
+		if(Auth::check()){
+			Auth::logout();
+			return Redirect::to('/');
+		}
+	}
 }
 ?>

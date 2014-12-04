@@ -13,7 +13,12 @@
 
 Route::get('/', function()
 {
-	return View::make('home')->with('name', array('username' => Auth::user()->username, 'first_name' => Auth::user()->first_name));
+	if(Auth::check()){
+		Log::info('authorized...');
+		return View::make('home')->with('name', array('username' => Auth::user()->username, 'first_name' => Auth::user()->first_name));
+	}
+	else
+		return View::make('home');
 });
 
 Route::get('login', array('uses' => 'LoginController@showLogin'));
@@ -26,6 +31,7 @@ Route::get('users', function() {
 	return View::make('users')->with("users", $users);
 
 });
-// Route::get('login', function() {
-// 	return View::make('login');
-// });
+
+Route::get('logout', array('uses' => 'LoginController@doLogout'));
+
+Route::get('controlpanel', array('uses' => 'ControlPanelController@show'));
