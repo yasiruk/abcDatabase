@@ -33,7 +33,6 @@ Route::get('users', function() {
 });
 
 Route::get('logout', array('uses' => 'LoginController@doLogout'));
-
 Route::get('controlpanel', array('uses' => 'ControlPanelController@show'));
 
 
