@@ -11,13 +11,15 @@
 |
 */
 
+
+
 ClassLoader::addDirectories(array(
 
 	app_path().'/commands',
 	app_path().'/controllers',
 	app_path().'/models',
 	app_path().'/database/seeds',
-	app_path(),'/commodityAnalysis' //custom comoddity analysis classes
+	app_path(),'/libs', //APP helper classes
 ));
 
 /*

@@ -13,9 +13,9 @@ class CreateCommodityCategoryTable extends Migration {
 	public function up()
 	{
 		Schema::create('commodityCategories', function($table) {
-			$table->incements('category_id');
+			$table->increments('category_id');
 			$table->string('commoditycatergory');
-		})
+		});
 	}
 
 	/**

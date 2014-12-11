@@ -15,7 +15,7 @@ class CreateCommodityTable extends Migration {
 		Schema::create('commodities', function($table) {
 			$table->integer('category_id');
 			$table->string('commodity')->unique();
-		})
+		});
 	}
 
 	/**
