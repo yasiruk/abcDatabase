@@ -1,9 +1,9 @@
-	<?php
+<?php
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCommodityCategoryTable extends Migration {
+class CreateContactpersonsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,7 @@ class CreateCommodityCategoryTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('commodityCategories', function($table) {
-			$table->increments('category_id');
-			$table->string('commoditycatergory');
-		});
+		Schema::create('users', function($table))
 	}
 
 	/**
@@ -25,7 +22,7 @@ class CreateCommodityCategoryTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('commodityCategories');
+		//
 	}
 
 }

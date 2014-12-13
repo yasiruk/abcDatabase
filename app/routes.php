@@ -10,6 +10,7 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+use \CommodityAnalysis;
 
 Route::get('/', function()
 {
@@ -35,7 +36,10 @@ Route::get('users', function() {
 Route::get('logout', array('uses' => 'LoginController@doLogout'));
 Route::get('controlpanel', array('uses' => 'ControlPanelController@show'));
 
+Route::get('controlpanel', array('uses' => 'ControlPanelController@show'));
 
-Route::get('krv' , function(){
-	return View::make('krvtest');
+Route::get('hello', function() {
+	
+	return CommodityAnalyser::identifyCommodity("test");
+	
 });
