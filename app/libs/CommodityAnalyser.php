@@ -7,3 +7,5 @@ class CommodityAnalyser
 		return "Got the commodityDescription";
 	}
 }
+
+?>

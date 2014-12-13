@@ -12,6 +12,12 @@
 */
 use \CommodityAnalysis;
 
+//blade content tags altration for Angular JS
+
+Blade::setContentTags('<%', '%>'); 		
+Blade::setEscapedContentTags('<%%', '%%>');
+
+
 Route::get('/', function()
 {
 	if(Auth::check()){
@@ -41,4 +47,11 @@ Route::get('hello', function() {
 	
 	return CommodityAnalyser::identifyCommodity("test");
 	
+});
+
+Route::get('browse', function() {
+	return View::make('browse');
+});
+Route::get('json/browse', function() {
+	return BL::paginate(9)->toJson();
 });

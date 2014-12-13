@@ -13,6 +13,7 @@
         <script src="libs/jquery-2.1.1.min.js"></script>
         <script src="libs/js/bootstrap.min.js"></script>
     </head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
     <body onload="onload('hhome')">
         
 
@@ -77,7 +78,7 @@
                     else
                         $link = "./login";
                 ?>
-                <li id="hlogin"><a href={{ $link }}>{{ isset($name) ? $name['username'] : "login"}} </a></li>
+                <li id="hlogin"><a href=<% $link %>><% isset($name) ? $name['username'] : "login" %> </a></li>
                 <li id="hlogout"><a href="./logout">log out </a></li>
 
             </ul>

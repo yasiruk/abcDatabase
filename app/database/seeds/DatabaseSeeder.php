@@ -55,9 +55,67 @@ class BLTableSeeder extends Seeder {
 			$table->index('blnumber');
 			$table->primary('blnumber');
 		*/
+		DB::table('bltable')->delete();
+		
 		BL::create(
 			array(
 				'blnumber' => 90,
+				'shipper' => 'Singer',
+				'consignee' => 'ABC', 
+				'notifyparty' => 'Dialog',
+				'vessel' => 'K-Line',
+				'voyageno' => 8900,
+				'portoflading' => 'Colombo',
+				'portofdischarge' => 'Hambatota',
+				'bookingno' => 833,
+				'commoditydesc' => 'A container of used computer parts and electronics',
+				'shiponboarddate' => '2014-12-10'
+				));
+		BL::create(
+			array(
+				'blnumber' => 91,
+				'shipper' => 'Singer',
+				'consignee' => 'ABC', 
+				'notifyparty' => 'Dialog',
+				'vessel' => 'K-Line',
+				'voyageno' => 8900,
+				'portoflading' => 'Colombo',
+				'portofdischarge' => 'Hambatota',
+				'bookingno' => 833,
+				'commoditydesc' => 'A container of used computer parts and electronics',
+				'shiponboarddate' => '2014-12-10'
+				));
+		BL::create(
+			array(
+				'blnumber' => 92,
+				'shipper' => 'Singer',
+				'consignee' => 'ABC', 
+				'notifyparty' => 'Dialog',
+				'vessel' => 'K-Line',
+				'voyageno' => 8900,
+				'portoflading' => 'Colombo',
+				'portofdischarge' => 'Hambatota',
+				'bookingno' => 833,
+				'commoditydesc' => 'A container of used computer parts and electronics',
+				'shiponboarddate' => '2014-12-10'
+				));
+		BL::create(
+			array(
+				'blnumber' => 93,
+				'shipper' => 'Singer',
+				'consignee' => 'ABC', 
+				'notifyparty' => 'Dialog',
+				'vessel' => 'K-Line',
+				'voyageno' => 8900,
+				'portoflading' => 'Colombo',
+				'portofdischarge' => 'Hambatota',
+				'bookingno' => 833,
+				'commoditydesc' => 'A container of used computer parts and electronics',
+				'shiponboarddate' => '2014-12-10'
+				));
+		BL::create(
+			array(
+				'blnumber' => 94,
 				'shipper' => 'Singer',
 				'consignee' => 'ABC', 
 				'notifyparty' => 'Dialog',
